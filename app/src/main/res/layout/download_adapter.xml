@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true"
+    card_view:elevation="5dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_download_adapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_imageView_download_adapter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageView_download_adapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_landscape"
+                app:riv_corner_radius_top_left="5dp"
+                app:riv_corner_radius_top_right="5dp" />
+
+            <ImageView
+                android:id="@+id/imageView_play_my_video_adapter"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/play" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout_imageView_download_adapter"
+            android:background="#FFFFFF"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_toStartOf="@+id/imageView_delete_download_adapter">
+
+                <TextView
+                    android:id="@+id/textView_title_download_adapter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textColor="@color/textView_title_adapter"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textView_sub_title_download_adapter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_title_download_adapter"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textColor="@color/textView_subTitle_adapter"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView_delete_download_adapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/delete" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

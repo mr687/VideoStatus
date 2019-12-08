@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "401221882208",
+    "firebase_url": "https://api-4688143480772480423-765521.firebaseio.com",
+    "project_id": "api-4688143480772480423-765521",
+    "storage_bucket": "api-4688143480772480423-765521.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401221882208:android:7b8fe2a7f0808d1a8ace05",
+        "android_client_info": {
+          "package_name": "com.serious.datingapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401221882208-8r2g6s084peuc7g3aeinqni67dni03u0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.serious.datingapps",
+            "certificate_hash": "1db786bbdec83b0412a2fc295f2909e13790a3a7"
+          }
+        },
+        {
+          "client_id": "401221882208-62ed4h4sqev0vsq7ee4dg7c55h48q4vk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.serious.datingapps",
+            "certificate_hash": "540012e32633661e021c0dbe55eec8cbee15eb0f"
+          }
+        },
+        {
+          "client_id": "401221882208-34pud5c2j714e7d9bc9nt4u4i788si5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs1Eoav8ngRrrIpqnlPt0ira4WRPpM5yg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401221882208-vvv8ar3tdif2rbet3ga8q3u16qfj989l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401221882208:android:53acff010e4529758ace05",
+        "android_client_info": {
+          "package_name": "com.socialgaming.appsclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401221882208-2n8fvu7pq53gu9ub3j7d7omrt99gi7pk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.socialgaming.appsclub",
+            "certificate_hash": "adb2c6bb078a24be55de7c2e9982d7911e13c947"
+          }
+        },
+        {
+          "client_id": "401221882208-0trvjil4gqnsiilftbpolib96g31ioet.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.socialgaming.appsclub",
+            "certificate_hash": "540012e32633661e021c0dbe55eec8cbee15eb0f"
+          }
+        },
+        {
+          "client_id": "401221882208-34pud5c2j714e7d9bc9nt4u4i788si5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs1Eoav8ngRrrIpqnlPt0ira4WRPpM5yg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401221882208-vvv8ar3tdif2rbet3ga8q3u16qfj989l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".Fragment.ReferenceCodeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_reference_code_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="@string/your_reference_code"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout_copy_reference_code"
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/code_bg"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView_reference_code"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/reference_code"
+                                android:textColor="@color/textView_reference_code"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView_copy_reference_code"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text="@string/tab_to_copy"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:text="@string/reference_code_detail"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/reference_code_img" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbar_reference_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/textView_noDataFound_reference_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/no_data_found"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

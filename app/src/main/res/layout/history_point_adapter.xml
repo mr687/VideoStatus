@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_history_point_adapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/textView_point_history_point_adapter"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_type_history_point_adapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textColor="@color/textView_title_adapter"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_date_history_point_adapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/textView_subTitle_adapter"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView_point_history_point_adapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/textView_title_adapter"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/relativeLayout_history_point_adapter"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/line" />
+
+</RelativeLayout>

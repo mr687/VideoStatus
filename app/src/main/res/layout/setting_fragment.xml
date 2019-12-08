@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:paddingBottom="15dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/custom_settings"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_setting" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:id="@+id/textView_setting_fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/switch_setting"
+                        android:text="@string/enable_push_notification"
+                        android:textColor="@color/textView_setting"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_setting" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_clear_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/imageView_clear_setting"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/clear_cache"
+                            android:textColor="@color/textView_setting"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/locally_cached_data"
+                                android:textColor="@color/textView_setting"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/textView_size_setting"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:text=""
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/textView_setting"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView_clear_setting"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/clear_cash" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_spinner_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_setting" />
+
+                <TextView
+                    android:id="@+id/textView_contactUs_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/contact_us"
+                    android:textColor="@color/textView_setting"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_setting" />
+
+                <TextView
+                    android:id="@+id/textView_faq_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/faq"
+                    android:textColor="@color/textView_setting"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_setting" />
+
+                <TextView
+                    android:id="@+id/textView_verification_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/request_verification"
+                    android:textColor="@color/textView_setting"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_setting" />
+
+                <TextView
+                    android:id="@+id/textView_point_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/earn_point"
+                    android:textColor="@color/textView_setting"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_setting" />
+
+                <TextView
+                    android:id="@+id/textView_shareApp_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/share_app"
+                    android:textColor="@color/textView_setting"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_setting" />
+
+                <TextView
+                    android:id="@+id/textView_rateApp_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/rate_app"
+                    android:textColor="@color/textView_setting"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_setting" />
+
+
+                <TextView
+                    android:id="@+id/textView_moreApp_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/more_app"
+                    android:textColor="@color/textView_setting"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_setting" />
+
+                <TextView
+                    android:id="@+id/textView_privacy_policy_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/textView_setting"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_setting" />
+
+                <TextView
+                    android:id="@+id/textView_aboutUs_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/about_us"
+                    android:textColor="@color/textView_setting"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_setting" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout_pro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_pro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                app:contentScrim="@color/transparent"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_userDetail_pro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/animation_list"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageView_pro"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="140dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/profile"
+                            app:civ_border_color="@color/imageView_border_profile"
+                            app:civ_border_width="2dp" />
+                        <TextView
+                            android:id="@+id/textView_name_pro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/app_name"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/linearLayout_userDetail_pro"
+                            android:layout_marginLeft="120dp"
+                            android:layout_marginTop="-110dp"
+                            app:cardUseCompatPadding="true"
+                            app:cardBackgroundColor="@color/transparent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                android:padding="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:id="@+id/textView_video_pro"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:text="@string/value"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:text="@string/post_video"
+                                        android:textColor="@color/white"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/linearLayout_follower_pro"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:id="@+id/textView_followers_pro"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:text="@string/value"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:text="@string/followers"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/linearLayout_followings_pro"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:id="@+id/textView_following_pro"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:text="@string/value"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:text="@string/following"
+                                        android:textColor="@color/white"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp">
+
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="90dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/button_follow_pro"
+                                android:layout_width="120dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/gradient"
+                                android:text="@string/follow"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+                            <ImageView
+                                android:id="@+id/imageView_youtube_pro"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/youtube_ic" />
+                            <ImageView
+                                android:id="@+id/imageView_instagram_pro"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/insta_ic" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-180dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <FrameLayout
+                android:id="@+id/frameLayout_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+        </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/textView_information_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/no_data_found"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/portrait_ic" />
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView_my_video_adapter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="2dp"
+    app:cardUseCompatPadding="true"
+    card_view:elevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_imageView_my_video_adapter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imageView_my_video_adapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_landscape"
+                app:riv_corner_radius_top_left="5dp"
+                app:riv_corner_radius_top_right="5dp" />
+
+            <ImageView
+                android:id="@+id/imageView_play_my_video_adapter"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/play" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout_imageView_my_video_adapter"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:paddingStart="8dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/linearLayout_delete_myVideo_adapter"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_title_myVideo_adapter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textColor="@color/textView_title_adapter"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_like_subCat_adapter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_title_myVideo_adapter"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/view" />
+
+                    <TextView
+                        android:id="@+id/textView_view_myVideo_adapter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:text="" />
+
+                    <ImageView
+                        android:id="@+id/imageView_like_myVideo_adapter"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/like_video" />
+
+                    <TextView
+                        android:id="@+id/textView_like_myVideo_adapter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:text="" />
+
+                    <ImageView
+                        android:id="@+id/imageView_delete_myVideo_adapter"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/delete" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_delete_myVideo_adapter"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textView_subtitle_myVideo_adapter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/cat_name_bg"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/textView_subTitle_adapter"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

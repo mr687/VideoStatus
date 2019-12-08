@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_spinner"
+    tools:context=".Activity.Spinner">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        android:textStyle="bold"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout_spinner"
+        android:layout_below="@+id/toolbar_spinner">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_root_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp">
+
+                <rubikstudio.library.LuckyWheelView
+                    android:id="@+id/luckyWheel_spinner"
+                    android:layout_width="270dp"
+                    android:layout_height="270dp"
+                    android:layout_centerInParent="true"
+                    app:lkwBackgroundColor="@color/toolbar"
+                    app:lkwCenterImage="@drawable/wheel"
+                    app:lkwCursor="@drawable/ic_cursor"
+                    app:lkwTextColor="@color/white" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_play_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout_spinner"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_msg_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/toolbar"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/button_login_bg"
+                    android:text="@string/play"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+
+    <ProgressBar
+        android:id="@+id/progressbar_spinner"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/textView_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/no_data_found"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

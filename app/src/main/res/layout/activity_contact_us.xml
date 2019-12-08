@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ContactUs">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        android:textStyle="bold"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout_contact_us"
+        android:layout_below="@+id/toolbar_contact_us">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/contact_detail"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editText_name_contact_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/contact_us_bg"
+                    android:hint="@string/name"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textView_contact_us"
+                    android:textColorHint="@color/textView_contact_us"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/editText_email_contact_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/contact_us_bg"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textView_contact_us"
+                    android:textColorHint="@color/textView_contact_us"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/textView_subject_contact_us"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/subject"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/textView_subject_contact_us"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/contact_us_bg">
+
+                        <Spinner
+                            android:id="@+id/spinner_contact_us"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="#00000000"
+                            android:prompt="@string/app_name" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/down_arrow" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/editText_message_contact_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/contact_us_bg"
+                    android:gravity="top"
+                    android:hint="@string/your_message"
+                    android:maxLines="4"
+                    android:minLines="4"
+                    android:padding="10dp"
+                    android:textColor="@color/textView_contact_us"
+                    android:textColorHint="@color/textView_contact_us"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button_contact_us"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/home_button_bg"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+
+</RelativeLayout>

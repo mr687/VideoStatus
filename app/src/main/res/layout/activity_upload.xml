@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        android:textStyle="bold"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout_upload"
+        android:layout_below="@+id/toolbar_upload"
+        android:background="@color/view_login">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/video_title"
+                        android:textColor="@color/textView_upload_fragment"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:clipToPadding="true"
+                        app:cardCornerRadius="5dp">
+
+                        <EditText
+                            android:id="@+id/editText_upload"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#00000000"
+                            android:hint="@string/name"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textColor="#424242"
+                            android:textColorHint="#909090"
+                            android:textSize="16sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/video_category_name"
+                        android:textColor="@color/textView_upload_fragment"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:clipToPadding="true"
+                        app:cardCornerRadius="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                            <Spinner
+                                android:id="@+id/spinner_upload"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="#00000000"
+                                android:prompt="@string/app_name" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="10dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/down_arrow" />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/video_type"
+                        android:textColor="@color/textView_upload_fragment"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:clipToPadding="true"
+                        app:cardCornerRadius="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                            <Spinner
+                                android:id="@+id/spinner_videoType_upload"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="#00000000"
+                                android:prompt="@string/app_name" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="10dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/down_arrow" />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView_imageUpload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:clipToPadding="true">
+
+                        <LinearLayout
+                            android:background="@drawable/gradient_item"
+                            android:layout_margin="10dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:id="@+id/linearLayout_image_select_upload"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+                            <TextView
+                                android:id="@+id/textView_image_select_upload"
+                                android:layout_margin="10dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/welcome_two"
+                                android:text="@string/add_thumbnail_file"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/textView_image_upload"
+                                android:textColor="@color/white"
+                                android:text="@string/no_file_selected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:id="@+id/imageView_upload"
+                                android:layout_width="280dp"
+                                android:layout_height="200dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:contentDescription="@string/app_name"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/placeholder_portable" />
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:clipToPadding="true"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout_video_select_upload"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/textView_video_select_upload"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="@string/add_video_file"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView_video_upload"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="@string/no_file_selected_video"
+                                android:textColor="@color/textView_upload_fragment"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_upload"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gradient_item"
+                    android:text="@string/upload"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbar_upload"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+
+</RelativeLayout>

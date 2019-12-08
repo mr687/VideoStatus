@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageView_portrait_adapter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/placeholder_landscape" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_fav_portrait_adapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginRight="350dp"
+            android:background="@color/transparent" />
+
+        <ImageView
+            android:id="@+id/imageView_fav_portrait_adapter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_play"
+            android:tint="@color/colorPrimary"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView_home_adapter"
+        android:background="#FFFFFF"
+        android:paddingStart="8dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="3dp"
+        android:layout_marginTop="230dp">
+
+    </RelativeLayout>
+</RelativeLayout>
