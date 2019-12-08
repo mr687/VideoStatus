@@ -103,13 +103,7 @@ public class Verification extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Random generator = new Random();
-                int n = generator.nextInt(9999 - 1000) + 1000;
-
-                String stringEmail = method.pref.getString(method.reg_email, null);
-                resend_verification(stringEmail, String.valueOf(n));
-
+                resend_verification();
             }
         });
 
@@ -158,7 +152,7 @@ public class Verification extends AppCompatActivity {
             public void onVerificationFailed(FirebaseException e) {
                 progressDialog.dismiss();
                 Log.d("TAGG", e.getMessage());
-                method.alertBox("Error in verification");
+                method.alertBox("Error in verification : "+ e.getLocalizedMessage());
             }
 
             @Override
@@ -320,75 +314,19 @@ public class Verification extends AppCompatActivity {
         });
     }
 
-    public void resend_verification(String sendEmail, String otp) {
+    public void resend_verification() {
 
         progressDialog.show();
         progressDialog.setMessage(getResources().getString(R.string.loading));
         progressDialog.setCancelable(false);
 
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.setTimeout(60000);
-        RequestParams params = new RequestParams();
-        JsonObject jsObj = (JsonObject) new Gson().toJsonTree(new API(Verification.this));
-        jsObj.addProperty("method_name", "user_register_verify_email");
-        jsObj.addProperty("email", sendEmail);
-        jsObj.addProperty("otp_code", otp);
-        params.put("data", API.toBase64(jsObj.toString()));
-        client.post(Constant_Api.url, params, new AsyncHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-
-                Log.d("Response", new String(responseBody));
-                String res = new String(responseBody);
-
-                try {
-                    JSONObject jsonObject = new JSONObject(res);
-
-                    if (jsonObject.has(Constant_Api.STATUS)) {
-
-                        String status = jsonObject.getString("status");
-                        String message = jsonObject.getString("message");
-                        method.alertBox(message);
-
-                    } else {
-
-                        JSONArray jsonArray = jsonObject.getJSONArray(Constant_Api.tag);
-
-                        for (int i = 0; i < jsonArray.length(); i++) {
-
-                            JSONObject object = jsonArray.getJSONObject(i);
-                            String msg = object.getString("msg");
-                            String success = object.getString("success");
-
-                            if (success.equals("1")) {
-
-                                method.editor.putString(method.verification_code, otp);
-                                method.editor.commit();
-
-                                method.alertBox(msg);
-                            } else {
-                                method.alertBox(msg);
-                            }
-
-                        }
-
-                    }
-
-                    progressDialog.dismiss();
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    progressDialog.dismiss();
-                    method.alertBox("Register Successfull");
-                }
-
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                method.alertBox(getResources().getString(R.string.server_time_out));
-                progressDialog.dismiss();
-            }
-        });
+        PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                phoneNo,
+                60,
+                TimeUnit.SECONDS,
+                Verification.this,
+                mCallbacks,
+                mToken
+        );
     }
 }

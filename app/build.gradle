@@ -83,4 +83,7 @@ dependencies {
     implementation 'com.github.douglasjunior:android-simple-tooltip:0.2.3'
     implementation 'com.github.nikhil-sachdeva:SliderViewLibrary:1.0'
     implementation 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.facebook.android:facebook-login:5.12.0'
+
 }

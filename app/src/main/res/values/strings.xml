@@ -79,7 +79,7 @@
     <string name="please_enter_password">Please enter password</string>
     <string name="please_enter_confirm_password">Please enter confirm password</string>
     <string name="name">Name</string>
-    <string name="phoneNo">Phone No</string>
+    <string name="phoneNo">Phone No, ex: 6282xxxx</string>
     <string name="please_enter_phone">Please enter phone no</string>
     <string name="please_enter_name">please enter name</string>
     <string name="please_enter_full_name">please enter full name</string>
